@@ -1,0 +1,57 @@
+%%% Observed Functionalities in the Experiment - Forming Sentences:- %%%
+
+1. ON Clicking Introduction tab - Redirecting to Introduction.html
+	After clicking on the introduction tab it displays the Introduction about the Forming Sentences-2 Experiment.
+2. On Clicking Theory tab       - Redirecting to theory.html
+	After Clicking on the theory tab it displays the theory about "What a Clause is?" and also sentence classification based on clause.
+3. ON Clicking Objective tab    - Redirecting to Objective.html
+	After Clicking on the Objective tab it displays the main objective of the experiment.
+4. ON Clicking Experiment tab   - Redirecting to Experiment.html
+        ON loading(Experiment tab) -
+        A Dropdown is enabled to select language -English/Hindi
+			if no language is selected we get a alert message saying "Select Language"
+            if selected(ENGLISH)
+                i)A text is appeared " Form a sentence (Declarative or Interrogative or any other type) from the given words (select the buttons in proper order)" 
+				
+                ii) Buttons of Jumbled words
+                    ON CLICKING (1 or more word buttons)
+                        i)word at the current position is disappeared 
+                        ii)A text is appeared "Formed Sentence (after selecting words):"
+                        iii)and also selected words are appended at the end to form a sentence.
+                        iv) " Reform the sentence " button also enabled
+							which at any moment returns how many ever words you have choosed back to the jumbled sentence along with hiding the message  Formed Sentence (after selecting words). 
+							If it is clicked after you have selected all words, it will again return the words back to the jumbled order. 
+							This button basically acts as a reset button.
+
+                    ON CLICKING (all the word buttons)
+                        i)Along with the above 4 functionalities(i,ii,iii,iv),
+                        ii)A button " Check the correctness of the sentence" is enabled.
+							ON CLICKING (Check the correctness of the sentence)
+								if("CORRECT SENTENCE)
+									GREEN TEXT "CORRECT SENTENCE " is appeared.
+								else
+									i)RED TEXT " WRONG SENTENCE " is appeared.
+									ii)BUTTON " Get Correct Sentence " is appeared.
+									ON CLICK(GET Corrrect Sentence)
+										Correct Sentences are Displayed and the Button toggled to (HIDE THE CORRECT SENTENCE)
+                                    ON CLICK(" HIDE THE CORRECT SENTENCE ")
+                                        ALL CORRECT ANSWERS ARE HIDDEN and the button is changed to "Get Answers" now
+									ON CLICKING "Get Answers" 
+										All correct answers are displayed and the button toogled back to "HIDE THE CORRECT SENTENCE"
+            if selected(HINDI)
+                SAME FUNCTIONALITIES AS ABOVE ENGLISH.
+
+5. ON Clicking QUIZZES tab   - Redirecting to Quizzes.html
+	After Clicking the Quizzes tab we get one quiz in each language with options below.
+
+6. ON Clicking Procedure tab   - Redirecting to Procedure.html
+	After clicking the Procedure tab It will display  step-by-step procedure of the experiment and info about the buttons in the experiment tab.
+
+%%% TO Be ADDED Possible Functionalities in the Experiment - Forming Sentences:- %%%
+
+1. In Experiment tab:
+    IF The sentence is correctly choosed then we can add a button to go to next quiz which displays a new jumbled -buttons to form a new Sentence in same language instead of repeating the same question.
+2.  In QUIZZES tab:
+    selection of options is to be done among the options displayed to evaluate correct answer.
+
+
