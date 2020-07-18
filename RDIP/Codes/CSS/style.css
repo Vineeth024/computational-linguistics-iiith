@@ -1,0 +1,26 @@
+#header-heading{
+    background: url(../../Libraries/header-blue.gif) no-repeat left top;
+    height: 50px;
+    margin: 0 auto;
+}
+#header-heading a:link,#header-heading a:visited{
+    color: #fcfcfc;
+    font-size: 30px;
+    text-decoration: none;
+}
+.heading{
+    color: black;
+    font-family: monospace;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+#experimentShortInfo
+{
+    color:#0000AA;
+    font-size:16px;
+}
+#buttonsShortInfo
+{
+    color:#0000FF;
+    font-size:14px;
+}

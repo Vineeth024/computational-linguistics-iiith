@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Experiment Page</title>
+        <script src="../JS/script.js"></script>
+        <link href="../CSS/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="heading" id="header-heading">
+                <a href="http://cl-iiith.vlabs.ac.in/index.html#">COMPUTATIONAL LINGUISTICS LAB</a>
+            </div>
+        </header>
+        <br>
+        <br>
+        <article>
+            <header class="heading" id="article-heading">
+                Forming Sentences - 2
+            </header>
+            <br>
+            <br>
+            <section>
+                <div class="heading" id="article-section-heading">
+                    Experiment
+                </div>
+                <br>
+                <div id="languageSelector" style="text-align: center;">
+                    <select id="dropdownSelect" onchange="selectedLanguage();">
+                        <option value="none" selected>---Select a Language---</option>
+                        <option value="english">English</option>
+                        <option value="hindi">Hindi</option>
+                    </select>
+                </div>
+               <div align="center" id="words_sentence">
+                    <style type="text/css">
+                    .spmHandler {
+                       background: transparent;
+                       padding: 5px;
+                       border: 0px ;
+                    }
+                    </style>
+                    <div id="experimentShortInfo">
+                        <br>
+                        <br>
+                        <b id="experimentShortInfoContent"></b>
+                    </div>
+                    <div id="buttonsShortInfo">
+                        <i id="buttonShortInfoContent"></i>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </body>
+</html>
