@@ -1,3 +1,4 @@
+var reformButtons;
 function selectedLanguage()
 {
     var LanguageSelected = document.getElementById("dropdownSelect");
@@ -42,6 +43,7 @@ function selectedLanguage()
             for(i=0 ; i<wordsInButtons.length ; i++)
             {
                 let button = document.createElement("button");
+                button.id='button'+i;
                 button.innerHTML = wordsInButtons[i]
                 body.appendChild(button);
 
@@ -54,6 +56,25 @@ function selectedLanguage()
                         document.getElementById("formedSentence").style.visibility="visible";
                         document.getElementById("reformTheSentenceButton").style.visibility="visible";
                     }
+                });
+                reformTheSentenceButton.addEventListener("click",function()
+                {
+                    for(i=0 ; i<wordsInButtons.length ; i++)
+                    {
+                        if(document.getElementById('button'+i).style.visibility=="hidden")
+                        {
+                            document.getElementById('button'+i).style.visibility="visible";
+                            document.getElementById("formedSentence").style.visibility="hidden";
+                            document.getElementById("formedSentenceContent").innerHTML="";
+                            document.getElementById("reformTheSentenceButton").style.visibility="hidden";
+                        }
+                    }
+                    button.addEventListener("click",function()
+                    {
+                        document.getElementById("formedSentence").style.visibility="visible";
+                        document.getElementById("reformTheSentenceButton").style.visibility="visible";
+                    });
+                    dropdownSelect.addEventListener("onchange",function selectedLanguage(){} );
                 });
             }
         }
@@ -90,6 +111,7 @@ function selectedLanguage()
             for(i=0 ; i<hindiwordsInButtons.length ; i++)
             {
                 let button = document.createElement("button");
+                button.id='button'+i;
                 button.innerHTML = hindiwordsInButtons[i]
                 body.appendChild(button);
 
@@ -102,6 +124,25 @@ function selectedLanguage()
                         document.getElementById("formedSentence").style.visibility="visible";
                         document.getElementById("reformTheSentenceButton").style.visibility="visible";
                     }
+                });
+                reformTheSentenceButton.addEventListener("click",function()
+                {
+                    for(i=0 ; i<hindiwordsInButtons.length ; i++)
+                    {
+                        if(document.getElementById('button'+i).style.visibility=="hidden")
+                        {
+                            document.getElementById('button'+i).style.visibility="visible";
+                            document.getElementById("formedSentence").style.visibility="hidden";
+                            document.getElementById("formedSentenceContent").innerHTML="";
+                            document.getElementById("reformTheSentenceButton").style.visibility="hidden";
+                        }
+                    }
+                    button.addEventListener("click",function()
+                    {
+                        document.getElementById("formedSentence").style.visibility="visible";
+                        document.getElementById("reformTheSentenceButton").style.visibility="visible";
+                    });
+                    dropdownSelect.addEventListener("onchange",function selectedLanguage(){} );
                 });
             }   
         }
