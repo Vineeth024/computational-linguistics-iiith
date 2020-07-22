@@ -42,3 +42,6 @@ button{
     height: 25px;
     margin: 5px;
 }
+#checkCorrectnessButton{
+    width: fit-content;
+}

@@ -7,6 +7,7 @@ function selectedLanguage()
     document.getElementById("formedSentence").style.visibility="hidden";
     document.getElementById("formedSentenceContent").innerHTML="";
     document.getElementById("reformTheSentenceButton").style.visibility="hidden";
+    document.getElementById("checkCorrectnessButton").style.visibility="hidden";
         if(value === "english")
         {
             var englishSentence1 = ['John ate an apple before afternoon','before afternoon John ate an apple','John before afternoon ate an apple'];
@@ -49,21 +50,28 @@ function selectedLanguage()
 
                 button.addEventListener("click",function()
                 {
+                    document.getElementById("formedSentence").style.visibility="visible";
                     document.getElementById("formedSentenceContent").innerHTML+=this.innerHTML+" ";
-                    this.style.visibility="hidden";
+                    this.style.display="none";
                     count+=1;
-                    if(count == 1){
-                        document.getElementById("formedSentence").style.visibility="visible";
+                    if(count >0){
                         document.getElementById("reformTheSentenceButton").style.visibility="visible";
+                    }
+                    var sentenceFormedByButtons=String(document.getElementById("formedSentenceContent").innerHTML).replace(/\s+$/,"");
+                    var x = sentenceFormedByButtons.split(" ");
+                    if(wordsInButtons.length == x.length)
+                    {
+                        document.getElementById("checkCorrectnessButton").style.visibility="visible";
                     }
                 });
                 reformTheSentenceButton.addEventListener("click",function()
                 {
+                    document.getElementById("checkCorrectnessButton").style.visibility="hidden";
                     for(i=0 ; i<wordsInButtons.length ; i++)
                     {
-                        if(document.getElementById('button'+i).style.visibility=="hidden")
+                        if(document.getElementById('button'+i).style.display=="none")
                         {
-                            document.getElementById('button'+i).style.visibility="visible";
+                            document.getElementById('button'+i).style.display="inline";
                             document.getElementById("formedSentence").style.visibility="hidden";
                             document.getElementById("formedSentenceContent").innerHTML="";
                             document.getElementById("reformTheSentenceButton").style.visibility="hidden";
@@ -99,6 +107,8 @@ function selectedLanguage()
             //for creating buttons
             var i=0;
             var count=0;
+            var clickedButtons=0;
+            var selectedButtons=0;
             let body = document.getElementById("buttons");
             var hindiwordsInButtons=finalHindiSentence.split(" ");
             for(i=0 ; i<hindiwordsInButtons.length ; i++)
@@ -117,21 +127,28 @@ function selectedLanguage()
 
                 button.addEventListener("click",function()
                 {
+                    document.getElementById("formedSentence").style.visibility="visible";
                     document.getElementById("formedSentenceContent").innerHTML+=this.innerHTML+" ";
-                    this.style.visibility="hidden";
+                    this.style.display="none";
                     count+=1;
-                    if(count == 1){
-                        document.getElementById("formedSentence").style.visibility="visible";
+                    if(count >0){
                         document.getElementById("reformTheSentenceButton").style.visibility="visible";
+                    }
+                    var sentenceFormedByButtons=String(document.getElementById("formedSentenceContent").innerHTML).replace(/\s+$/,"");
+                    var x = sentenceFormedByButtons.split(" ");
+                    if(hindiwordsInButtons.length == x.length)
+                    {
+                        document.getElementById("checkCorrectnessButton").style.visibility="visible";
                     }
                 });
                 reformTheSentenceButton.addEventListener("click",function()
                 {
+                    document.getElementById("checkCorrectnessButton").style.visibility="hidden";
                     for(i=0 ; i<hindiwordsInButtons.length ; i++)
                     {
-                        if(document.getElementById('button'+i).style.visibility=="hidden")
+                        if(document.getElementById('button'+i).style.display=="none")
                         {
-                            document.getElementById('button'+i).style.visibility="visible";
+                            document.getElementById('button'+i).style.display="inline";
                             document.getElementById("formedSentence").style.visibility="hidden";
                             document.getElementById("formedSentenceContent").innerHTML="";
                             document.getElementById("reformTheSentenceButton").style.visibility="hidden";
