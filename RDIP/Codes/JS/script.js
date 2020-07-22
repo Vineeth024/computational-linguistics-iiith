@@ -16,8 +16,6 @@ function selectedLanguage()
     document.getElementById("correctAnswer").style.visibility="hidden";
     document.getElementById("getCorrectSentenceButton").style.visibility="hidden";
     document.getElementById("showAnswers").innerHTML="";
-    myButton = document.getElementById("getCorrectSentenceButton");
-    myButton.value = "Get Correct Sentence";
         if(value === "english")
         {
             var englishSentence1 = ['John ate an apple before afternoon','before afternoon John ate an apple','John before afternoon ate an apple'];
@@ -99,10 +97,7 @@ function selectedLanguage()
                         document.getElementById("reformTheSentenceButton").style.visibility="visible";
                     });
                     dropdownSelect.addEventListener("change",function selectedLanguage(){});
-                    checkCorrectnessButton.addEventListener("click",function checkCorrectness(){
-                        myButton = document.getElementById("getCorrectSentenceButton");
-                        myButton.value = "Get Correct Sentence";
-                    });
+                    checkCorrectnessButton.addEventListener("click",function checkCorrectness(){});
                     getCorrectSentenceButton.addEventListener("click",function disp(){});
                 });
                 checkCorrectnessButton.addEventListener("click",function checkCorrectness(){});
@@ -188,10 +183,7 @@ function selectedLanguage()
                         document.getElementById("reformTheSentenceButton").style.visibility="visible";
                     });
                     dropdownSelect.addEventListener("change",function selectedLanguage(){} );
-                    checkCorrectnessButton.addEventListener("click",function checkCorrectness(){
-                        myButton = document.getElementById("getCorrectSentenceButton");
-                        myButton.value = "Get Correct Sentence";
-                    });
+                    checkCorrectnessButton.addEventListener("click",function checkCorrectness(){});
                     getCorrectSentenceButton.addEventListener("click",function disp(){});
                 });
                 checkCorrectnessButton.addEventListener("click",function checkCorrectness(){});
@@ -205,7 +197,6 @@ function selectedLanguage()
 }
 function checkCorrectness()
 {
-    getCorrectSentenceButton.addEventListener("click",function disp(){});
     document.getElementById("wrongAnswer").style.visibility="visible";
     document.getElementById("correctAnswer").style.visibility="visible";
     var selectedSentence;
@@ -225,27 +216,7 @@ function checkCorrectness()
             document.getElementById("correctAnswer").innerHTML="";
             document.getElementById("wrongAnswer").innerHTML="Wrong Answer!!!";
             document.getElementById("getCorrectSentenceButton").style.visibility="visible";
-            getCorrectSentenceButton.addEventListener("click",function disp(){
-                //document.getElementById("showAnswers").innerHTML=englishSentence[0] +"<br>"+ englishSentence[1]+"<br>"+englishSentence[2];
-                if(document.getElementById("getCorrectSentenceButton").value=="Get Correct Sentence")
-                {
-                    document.getElementById("showAnswers").innerHTML=englishSentence[0] +"<br>"+ englishSentence[1]+"<br>"+englishSentence[2];
-                    myButton = document.getElementById("getCorrectSentenceButton");
-                    myButton.value = "Hide the Correct Sentence";
-                }
-                else if(document.getElementById("getCorrectSentenceButton").value=="Hide the Correct Sentence")
-                {
-                    document.getElementById("showAnswers").innerHTML="";
-                    myButton = document.getElementById("getCorrectSentenceButton");
-                    myButton.value = "Get Answers";
-                }
-                else if(document.getElementById("getCorrectSentenceButton").value=="Get Answers")
-                {
-                    document.getElementById("showAnswers").innerHTML=englishSentence[0] +"<br>"+ englishSentence[1]+"<br>"+englishSentence[2];
-                    myButton = document.getElementById("getCorrectSentenceButton");
-                    myButton.value = "Hide the Correct Sentence";
-                }
-            });
+            getCorrectSentenceButton.addEventListener("click",function display(){});
         }
         
     }
@@ -261,29 +232,53 @@ function checkCorrectness()
             document.getElementById("correctAnswer").innerHTML="";
             document.getElementById("wrongAnswer").innerHTML="Wrong Answer!!!";
             document.getElementById("getCorrectSentenceButton").style.visibility="visible";
-            getCorrectSentenceButton.addEventListener("click",function(){
-                document.getElementById("showAnswers").innerHTML=hindiSentence[0] +"<br>"+ hindiSentence[1]+"<br>"+hindiSentence[2];
-                if(document.getElementById("getCorrectSentenceButton").value=="Get Correct Sentence")
-                {
-                    document.getElementById("showAnswers").innerHTML=hindiSentence[0] +"<br>"+ hindiSentence[1]+"<br>"+hindiSentence[2];
-                    myButton = document.getElementById("getCorrectSentenceButton");
-                    myButton.value = "Hide the Correct Sentence";
-                }
-                else if(document.getElementById("getCorrectSentenceButton").value=="Hide the Correct Sentence")
-                {
-                    document.getElementById("showAnswers").innerHTML="";
-                    myButton = document.getElementById("getCorrectSentenceButton");
-                    myButton.value = "Get Answers";
-                }
-                else if(document.getElementById("getCorrectSentenceButton").value=="Get Answers")
-                {
-                    document.getElementById("showAnswers").innerHTML=hindiSentence[0] +"<br>"+ hindiSentence[1]+"<br>"+hindiSentence[2];
-                    myButton = document.getElementById("getCorrectSentenceButton");
-                    myButton.value = "Hide the Correct Sentence";
-                    //getCorrectSentenceButton.addEventListener("click",function disp(){});
-                }
-               // getCorrectSentenceButton.addEventListener("click",function disp(){});
-            });
+            getCorrectSentenceButton.addEventListener("click",function display(){});
         }
+    }
+}
+function display(){
+    if(value==="english")
+    {
+    document.getElementById("showAnswers").innerHTML=englishSentence[0] +"<br>"+ englishSentence[1]+"<br>"+englishSentence[2];
+    if(document.getElementById("getCorrectSentenceButton").value=="Get Correct Sentence")
+    {
+        document.getElementById("showAnswers").innerHTML=englishSentence[0] +"<br>"+ englishSentence[1]+"<br>"+englishSentence[2];
+        myButton = document.getElementById("getCorrectSentenceButton");
+        myButton.value = "Hide the Correct Sentence";
+    }
+    else if(document.getElementById("getCorrectSentenceButton").value=="Hide the Correct Sentence")
+    {
+        document.getElementById("showAnswers").innerHTML="";
+        myButton = document.getElementById("getCorrectSentenceButton");
+        myButton.value = "Get Answers";
+    }
+    else if(document.getElementById("getCorrectSentenceButton").value=="Get Answers")
+    {
+        document.getElementById("showAnswers").innerHTML=englishSentence[0] +"<br>"+ englishSentence[1]+"<br>"+englishSentence[2];
+        myButton = document.getElementById("getCorrectSentenceButton");
+        myButton.value = "Hide the Correct Sentence";
+    }
+    }
+    if(value === "hindi")
+    {
+        document.getElementById("showAnswers").innerHTML=hindiSentence[0] +"<br>"+ hindiSentence[1]+"<br>"+hindiSentence[2];
+    if(document.getElementById("getCorrectSentenceButton").value=="Get Correct Sentence")
+    {
+        document.getElementById("showAnswers").innerHTML=hindiSentence[0] +"<br>"+ hindiSentence[1]+"<br>"+hindiSentence[2];
+        myButton = document.getElementById("getCorrectSentenceButton");
+        myButton.value = "Hide the Correct Sentence";
+    }
+    else if(document.getElementById("getCorrectSentenceButton").value=="Hide the Correct Sentence")
+    {
+        document.getElementById("showAnswers").innerHTML="";
+        myButton = document.getElementById("getCorrectSentenceButton");
+        myButton.value = "Get Answers";
+    }
+    else if(document.getElementById("getCorrectSentenceButton").value=="Get Answers")
+    {
+        document.getElementById("showAnswers").innerHTML=hindiSentence[0] +"<br>"+ hindiSentence[1]+"<br>"+hindiSentence[2];
+        myButton = document.getElementById("getCorrectSentenceButton");
+        myButton.value = "Hide the Correct Sentence";
+    }
     }
 }
