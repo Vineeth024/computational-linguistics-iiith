@@ -14,6 +14,7 @@ function selectedLanguage()
     document.getElementById("checkCorrectnessButton").style.visibility="hidden";
     document.getElementById("wrongAnswer").style.visibility="hidden";
     document.getElementById("correctAnswer").style.visibility="hidden";
+    document.getElementById("getCorrectSentenceButton").style.visibility="hidden";
         if(value === "english")
         {
             var englishSentence1 = ['John ate an apple before afternoon','before afternoon John ate an apple','John before afternoon ate an apple'];
@@ -75,6 +76,7 @@ function selectedLanguage()
                     document.getElementById("checkCorrectnessButton").style.visibility="hidden";
                     document.getElementById("wrongAnswer").style.visibility="hidden";
                     document.getElementById("correctAnswer").style.visibility="hidden";
+                    document.getElementById("getCorrectSentenceButton").style.visibility="hidden";
                     for(i=0 ; i<wordsInButtons.length ; i++)
                     {
                         if(document.getElementById('button'+i).style.display=="none")
@@ -158,6 +160,7 @@ function selectedLanguage()
                     document.getElementById("checkCorrectnessButton").style.visibility="hidden";
                     document.getElementById("wrongAnswer").style.visibility="hidden";
                     document.getElementById("correctAnswer").style.visibility="hidden";
+                    document.getElementById("getCorrectSentenceButton").style.visibility="hidden";
                     for(i=0 ; i<hindiwordsInButtons.length ; i++)
                     {
                         if(document.getElementById('button'+i).style.display=="none")
@@ -200,10 +203,12 @@ function checkCorrectness()
         {
             document.getElementById("correctAnswer").innerHTML="Right Answer!!!";
             document.getElementById("wrongAnswer").innerHTML="";
+            document.getElementById("getCorrectSentenceButton").style.visibility="hidden";
         }
         else{
             document.getElementById("correctAnswer").innerHTML="";
-            document.getElementById("wrongAnswer").innerHTML="Wrong Answer!!!"
+            document.getElementById("wrongAnswer").innerHTML="Wrong Answer!!!";
+            document.getElementById("getCorrectSentenceButton").style.visibility="visible";
         }
         
     }
@@ -213,10 +218,12 @@ function checkCorrectness()
         {
             document.getElementById("correctAnswer").innerHTML="Right Answer!!!";
             document.getElementById("wrongAnswer").innerHTML="";
+            document.getElementById("getCorrectSentenceButton").style.visibility="hidden";
         }
         else{
             document.getElementById("correctAnswer").innerHTML="";
-            document.getElementById("wrongAnswer").innerHTML="Wrong Answer!!!"
+            document.getElementById("wrongAnswer").innerHTML="Wrong Answer!!!";
+            document.getElementById("getCorrectSentenceButton").style.visibility="visible";
         }
     }
 }

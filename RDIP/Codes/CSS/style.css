@@ -44,6 +44,7 @@ button{
 }
 #checkCorrectnessButton{
     width: fit-content;
+    text-align: center;
 }
 #correctAnswer{
     text-align: center;
@@ -54,4 +55,8 @@ button{
     text-align: center;
     color: #ff0000;
     font-size: 30px;
+}
+#getCorrectSentenceButton{
+    width: fit-content;
+    text-align: center;
 }
