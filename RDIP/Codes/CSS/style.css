@@ -45,3 +45,13 @@ button{
 #checkCorrectnessButton{
     width: fit-content;
 }
+#correctAnswer{
+    text-align: center;
+    color: #008000;
+    font-size: 30px;
+}
+#wrongAnswer{
+    text-align: center;
+    color: #ff0000;
+    font-size: 30px;
+}
