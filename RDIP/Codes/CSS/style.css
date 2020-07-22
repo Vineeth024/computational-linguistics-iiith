@@ -60,3 +60,7 @@ button{
     width: fit-content;
     text-align: center;
 }
+#showAnswers{
+    text-align: center;
+    font-size: 22px;
+}
